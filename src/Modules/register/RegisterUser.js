@@ -1,7 +1,7 @@
 import * as React from "react";
 import {Link, Redirect} from "react-router-dom";
 import {connect} from 'react-redux';
-import * as UserServices from '../register/service/UserService';
+import * as UserServices from './service/LandingPageRegisterService';
 import * as AlertConstant from '../../Constant/AlertConstant';
 
 class Register extends React.Component {
@@ -29,17 +29,17 @@ class Register extends React.Component {
     handleChangeUsername = (event) => {
         const value = event.target.value;
         this.props.dispatch({type: 'SAVE_USER', addUser: {...this.props.addUser, userName: value}})
-    }
+    };
 
     handleChangePassword = (event) => {
         const value = event.target.value;
         this.props.dispatch({type: 'SAVE_USER', addUser: {...this.props.addUser, password: value}})
-    }
+    };
 
     handleChangeEmail = (event) => {
         const value = event.target.value;
         this.props.dispatch({type: 'SAVE_USER', addUser: {...this.props.addUser, email: value}})
-    }
+    };
 
     render() {
         if (this.state.redirect === true) {
@@ -83,8 +83,8 @@ class Register extends React.Component {
                                             </form>
                                             <hr/>
                                             <div className="text-center">
-                                                <Link to="/" className="small">Already have an account?
-                                                    Login!</Link>
+                                                <a href="/" className="small">Already have an account?
+                                                    Login!</a>
                                             </div>
                                         </div>
                                     </div>

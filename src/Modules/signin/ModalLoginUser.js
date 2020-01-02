@@ -39,7 +39,8 @@ class ModalLoginUser extends React.Component {
                 this.setState({redirect: true});
                 AlertConstant.status_success_200("Login Success");
                 window.location.reload(false);
-
+            }else {
+                AlertConstant.status_internal_server_error_500("Login Failed!");
             }
         })
             .catch(function (error) {
