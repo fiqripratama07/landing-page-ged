@@ -7,7 +7,7 @@ const initialState = {
     }
 };
 
-function UserReducer(state = initialState, action) {
+function LandingPageRegisterReducer(state = initialState, action) {
     const {type, addUser} = action;
     console.log("STATE BEFORE", state.addUser);
     switch (type) {
@@ -18,4 +18,4 @@ function UserReducer(state = initialState, action) {
     }
 }
 
-export default UserReducer;
+export default LandingPageRegisterReducer;

@@ -1,13 +1,29 @@
 import React from 'react';
 import AuthService from "../signin/service/AuthService";
 import * as AlertConstant from '../../Constant/AlertConstant';
+import {Link} from 'react-router-dom'
 import './Styles/Style.css';
 import Ship from '../../images/ship.jpg';
 import Plane from '../../images/plane.jpg';
 import ModalLoginUser from '../signin/ModalLoginUser';
+import * as LandingPageService from './service/LandingPageService';
+import {connect} from "react-redux";
 
 
 class LandingPageUser extends React.Component {
+
+    handleTracking = (event) => {
+        event.preventDefault();
+        LandingPageService.findTrackById(this.props.trackNumber).then(r =>
+            this.props.dispatch({type: 'TRACK_SUCCESS', track: r}));
+        window.location.href = '#tracking';
+    };
+
+    handleChangeTrackNumber = (event) => {
+        const number = event.target.value;
+        console.log("NUMBER", this.props);
+        this.props.dispatch({type: 'HANDLE_TRACK_NUMBER', trackNumber: number})
+    }
 
     handleLogout = () => {
         AuthService.logOut().then(r => AlertConstant.status_success_200("Logout Success")
@@ -97,9 +113,10 @@ class LandingPageUser extends React.Component {
                                         <form action="#">
                                             <div className="form-group d-flex">
                                                 <input type="text" className="form-control"
-                                                       placeholder="Enter your tracking number"/>
+                                                       placeholder="Enter your tracking number"
+                                                       onChange={this.handleChangeTrackNumber}/>
                                                 <button type="submit" className="btn btn-primary text-white px-4"
-                                                >Track
+                                                        onClick={this.handleTracking}>track
                                                 </button>
                                             </div>
                                         </form>
@@ -151,7 +168,7 @@ class LandingPageUser extends React.Component {
                     </div>
 
 
-                    <div className="site-section bg-light" id="services-section">
+                    <div className="site-section bg-light" id="tracking">
                         <div className="container">
                             <div className="row mb-5 justify-content-center">
                                 <div className="col-md-7 text-center">
@@ -171,7 +188,7 @@ class LandingPageUser extends React.Component {
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>elda</label>
+                                                            <label>{this.props.track.id}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
@@ -182,7 +199,7 @@ class LandingPageUser extends React.Component {
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>elda</label>
+                                                            <label>{this.props.track.listTransactions.packages.itemName}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
@@ -193,7 +210,7 @@ class LandingPageUser extends React.Component {
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>elda</label>
+                                                            <label>{this.props.track.listTransactions.originName}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
@@ -204,7 +221,7 @@ class LandingPageUser extends React.Component {
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>elda</label>
+                                                            <label>{this.props.track.listTransactions.destinationName}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
@@ -215,7 +232,7 @@ class LandingPageUser extends React.Component {
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>elda</label>
+                                                            <label>{this.props.track.listTransactions.status}</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -789,4 +806,8 @@ class LandingPageUser extends React.Component {
     }
 }
 
-export default LandingPageUser;
+function mapStateToProps(state) {
+    return {...state.landingPage}
+}
+
+export default connect(mapStateToProps)(LandingPageUser);
