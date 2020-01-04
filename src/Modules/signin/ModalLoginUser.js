@@ -30,7 +30,7 @@ class ModalLoginUser extends React.Component {
         Api.post('authenticate', {
             userName: this.props.login.userName,
             password: this.props.login.password
-        }).then(res => {
+        }).then((res, req)=> {
             console.log('res', res);
             if (res.status === 200) {
                 sessionStorage.setItem('userInfo', res.data.jwt);
@@ -39,8 +39,10 @@ class ModalLoginUser extends React.Component {
                 this.setState({redirect: true});
                 AlertConstant.status_success_200("Login Success");
                 window.location.reload(false);
-            }else {
+            }else if (res.status === 500) {
                 AlertConstant.status_internal_server_error_500("Login Failed!");
+            }else if (req.status === 403){
+                AlertConstant.status_bad_request_400("Login Failed!");
             }
         })
             .catch(function (error) {

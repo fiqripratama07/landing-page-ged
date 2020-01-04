@@ -134,41 +134,19 @@ class LandingPage extends React.Component {
                                 <div className="col-md-7 text-center">
                                     <div className="block-heading-1">
                                         <h2>What We Offer</h2>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia, there live the blind texts.</p>
+                                        <p>Enjoy convenience with Golden Expedition and Dropshipping (GED).</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="owl-carousel owl-all">
-                                <div className="block__35630">
-                                    <div className="icon mb-0">
-                                        <span className="flaticon-ferry"></span>
-                                    </div>
-                                    <h3 className="mb-3">Sea Freight</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
-                                </div>
 
-                                <div className="block__35630">
-                                    <div className="icon mb-0">
-                                        <span className="flaticon-airplane"></span>
-                                    </div>
-                                    <h3 className="mb-3">Air Freight</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
-                                </div>
 
                                 <div className="block__35630">
                                     <div className="icon mb-0">
                                         <span className="flaticon-box"></span>
                                     </div>
                                     <h3 className="mb-3">Package Forwarding</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
+                                    <p>We guarantee the package will definitely reach the customer's hands flawless and ontime. </p>
                                 </div>
 
                                 <div className="block__35630">
@@ -176,29 +154,16 @@ class LandingPage extends React.Component {
                                         <span className="flaticon-lorry"></span>
                                     </div>
                                     <h3 className="mb-3">Trucking</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
+                                    <p>We deliver consumer packages using trucks, with consumer package trucks delivered very safely. </p>
                                 </div>
 
-                                <div className="block__35630">
-                                    <div className="icon mb-0">
-                                        <span className="flaticon-warehouse"></span>
-                                    </div>
-                                    <h3 className="mb-3">Warehouse</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
-                                </div>
 
                                 <div className="block__35630">
                                     <div className="icon mb-0">
                                         <span className="flaticon-add"></span>
                                     </div>
                                     <h3 className="mb-3">Delivery</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
+                                    <p>The service that we prioritize for customers is speed in shipping packages. </p>
                                 </div>
 
                             </div>
@@ -213,9 +178,7 @@ class LandingPage extends React.Component {
                                 <div className="col-md-7 text-center">
                                     <div className="block-heading-1" data-aos="fade-up" data-aos-delay="">
                                         <h2>About Us</h2>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia, there live the blind texts.</p>
+                                        <p>About us</p>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +192,7 @@ class LandingPage extends React.Component {
                             <div className="row justify-content-center mb-4 block-img-video-1-wrap">
                                 <div className="col-md-12 mb-5">
                                     <figure className="block-img-video-1" data-aos="fade">
-                                        <a href="https://vimeo.com/45830194" data-fancybox data-ratio="2">
+                                        <a href="https://www.youtube.com/watch?v=MXc7Qwpdzis" data-fancybox data-ratio="2">
                                             <span className="icon"><span className="icon-play"></span></span>
                                             <img src="images/cargo_delivery_big.jpg" alt="Image"
                                                  className="img-fluid"/>
@@ -367,7 +330,7 @@ class LandingPage extends React.Component {
                                     </figure>
                                     <h3 className="font-size-20 text-black">Safira Andjani</h3>
                                     <span
-                                        className="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Frontend Dev</span>
+                                        className="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Mobile Dev</span>
                                     <p className="mb-4">Far far away, behind the word mountains, far from the
                                         countries
                                         Vokalia and Consonantia, there live the blind texts.</p>

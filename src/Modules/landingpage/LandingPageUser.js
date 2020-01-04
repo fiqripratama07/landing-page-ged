@@ -259,25 +259,6 @@ class LandingPageUser extends React.Component {
                                 </div>
                             </div>
                             <div className="owl-carousel owl-all">
-                                <div className="block__35630">
-                                    <div className="icon mb-0">
-                                        <span className="flaticon-ferry"></span>
-                                    </div>
-                                    <h3 className="mb-3">Sea Freight</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
-                                </div>
-
-                                <div className="block__35630">
-                                    <div className="icon mb-0">
-                                        <span className="flaticon-airplane"></span>
-                                    </div>
-                                    <h3 className="mb-3">Air Freight</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
-                                </div>
 
                                 <div className="block__35630">
                                     <div className="icon mb-0">
@@ -299,15 +280,6 @@ class LandingPageUser extends React.Component {
                                         regelialia. </p>
                                 </div>
 
-                                <div className="block__35630">
-                                    <div className="icon mb-0">
-                                        <span className="flaticon-warehouse"></span>
-                                    </div>
-                                    <h3 className="mb-3">Warehouse</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the
-                                        necessary
-                                        regelialia. </p>
-                                </div>
 
                                 <div className="block__35630">
                                     <div className="icon mb-0">
