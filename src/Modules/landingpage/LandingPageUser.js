@@ -15,7 +15,8 @@ class LandingPageUser extends React.Component {
     handleTracking = (event) => {
         event.preventDefault();
         LandingPageService.findTrackById(this.props.trackNumber).then(r =>
-            this.props.dispatch({type: 'TRACK_SUCCESS', track: r}));
+            this.props.dispatch({type: 'TRACK_SUCCESS', transactions: r}));
+        console.log("NUMBER", this.props);
         window.location.href = '#tracking';
     };
 
@@ -91,8 +92,7 @@ class LandingPageUser extends React.Component {
 
                                 </div>
 
-                                <div className="toggle-button d-inline-block d-lg-none"><a href="#"
-                                                                                           className="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                                <div className="toggle-button d-inline-block d-lg-none"><a href="#" className="site-menu-toggle py-5 js-menu-toggle text-black"><span
                                     className="icon-menu h3"></span></a></div>
 
                             </div>
@@ -187,41 +187,41 @@ class LandingPageUser extends React.Component {
                                                         <div className="col-1">
                                                             <label>:</label>
                                                         </div>
-                                                        <div className="col-sm-1">
-                                                            <label>{this.props.track.id}</label>
+                                                        <div className="col-sm-4">
+                                                            <label>{this.props.transactions.id}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
                                                         <div className="col-sm-4">
-                                                            <label className="text-detail">Goods Details</label>
+                                                            <label className="text-detail">Consignee</label>
                                                         </div>
                                                         <div className="col-1">
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>{this.props.track.listTransactions.packages.itemName}</label>
+                                                            <label>{this.props.transactions.destinationName}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
                                                         <div className="col-sm-4">
-                                                            <label className="text-detail">Sender Name</label>
+                                                            <label className="text-detail">Destination</label>
                                                         </div>
                                                         <div className="col-1">
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>{this.props.track.listTransactions.originName}</label>
+                                                            <label>{this.props.transactions.destinationAddresses.addressLocations.name}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
                                                         <div className="col-sm-4">
-                                                            <label className="text-detail">Recipient Name</label>
+                                                            <label className="text-detail">Time</label>
                                                         </div>
                                                         <div className="col-1">
                                                             <label>:</label>
                                                         </div>
-                                                        <div className="col-sm-1">
-                                                            <label>{this.props.track.listTransactions.destinationName}</label>
+                                                        <div className="col-1">
+                                                            <label>{this.props.transactions.createTime}</label>
                                                         </div>
                                                     </div>
                                                     <div className="form-group row detail">
@@ -232,7 +232,7 @@ class LandingPageUser extends React.Component {
                                                             <label>:</label>
                                                         </div>
                                                         <div className="col-sm-1">
-                                                            <label>{this.props.track.listTransactions.status}</label>
+                                                            <label>{this.props.transactions.status}</label>
                                                         </div>
                                                     </div>
                                                 </div>
