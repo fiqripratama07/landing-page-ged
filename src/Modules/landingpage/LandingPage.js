@@ -1,6 +1,7 @@
 import React from 'react';
-import Ship from '../../images/ship.jpg';
 import Plane from '../../images/plane.jpg';
+import Custom from '../../images/fast.jpg';
+import Storage from '../../images/storage.jpg';
 import ModalLoginUser from '../signin/ModalLoginUser';
 
 class LandingPage extends React.Component {
@@ -71,8 +72,7 @@ class LandingPage extends React.Component {
 
                                 </div>
 
-                                <div className="toggle-button d-inline-block d-lg-none"><a href="#"
-                                                                                           className="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                                <div className="toggle-button d-inline-block d-lg-none"><a href="#" className="site-menu-toggle py-5 js-menu-toggle text-black"><span
                                     className="icon-menu h3"></span></a></div>
 
                             </div>
@@ -87,9 +87,9 @@ class LandingPage extends React.Component {
                                 <div className="row align-items-center">
                                     <div className="col-lg-6">
                                         <h1>Choose Your Quality Delivery of Your Expedition and Dropshipping</h1>
-                                        <p className="mb-5">GED is a company engaged in shipping and logistics
+                                        <p className="mb-5">GED is a company engaged in expedition and shipping
                                             headquartered in Jakarta, Indonesia.
-                                            The official name is Golden expedition and dropshipping</p>
+                                            The official name is Golden Expedition and Dropshipping</p>
                                     </div>
                                 </div>
                             </div>
@@ -98,37 +98,28 @@ class LandingPage extends React.Component {
                             <div className="container">
                                 <div className="owl-carousel owl-all">
                                     <div className="service text-center">
-                                        <a href="#"><img src={Ship} alt="Image"
+                                        <a href="#"><img src={Custom} alt="Image"
                                                          className="img-fluid" style={{height: '225px'}}/></a>
                                         <div className="px-md-3">
-                                            <h3 className="text-primary">Sea Freight</h3>
-                                            <p>Far far away, behind the word mountains, far from the countries
-                                                Vokalia
-                                                and
-                                                Consonantia.</p>
+                                            <h3 className="text-primary">Fast Delivery</h3>
+                                            <p>The service that we prioritize for customers is speed in shipping packages.</p>
                                         </div>
                                     </div>
                                     <div className="service text-center">
                                         <a href="#"><img src="images/cargo_delivery_small.jpg" alt="Image"
-                                                         className="img-fluid"/></a>
+                                                         className="img-fluid" style={{height: '225px'}}/></a>
                                         <div className="px-md-3">
                                             <h3 className="text-primary">Package Forwarding</h3>
-                                            <p>Far far away, behind the word mountains, far from the countries
-                                                Vokalia
-                                                and
-                                                Consonantia.</p>
+                                            <p>We guarantee the package will definitely reach the customer's hands.</p>
                                         </div>
                                     </div>
                                     <div className="service text-center">
-                                        <a href="#"><img src={Plane} alt="Image"
+                                        <a href="#"><img src={Storage} alt="Image"
                                                          className="img-fluid"
                                                          style={{height: '225px'}}/></a>
                                         <div className="px-md-3">
-                                            <h3 className="text-primary">Air Freight</h3>
-                                            <p>Far far away, behind the word mountains, far from the countries
-                                                Vokalia
-                                                and
-                                                Consonantia.</p>
+                                            <h3 className="text-primary">Storage Point</h3>
+                                            <p>We provide a lot of storage points scattered throughout Jakarta.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -299,7 +290,7 @@ class LandingPage extends React.Component {
                             <div className="owl-carousel owl-all">
                                 <div className="block-team-member-1 text-center rounded h-100">
                                     <figure>
-                                        <img src="images/person_1.jpg" alt="Image"
+                                        <img src="images/tri.jpeg" alt="Image"
                                              className="img-fluid rounded-circle"/>
                                     </figure>
                                     <h3 className="font-size-20 text-black">Trisiam</h3>
@@ -323,7 +314,7 @@ class LandingPage extends React.Component {
 
                                 <div className="block-team-member-1 text-center rounded h-100">
                                     <figure>
-                                        <img src="images/person_2.jpg" alt="Image"
+                                        <img src="images/elda.jpeg" alt="Image"
                                              className="img-fluid rounded-circle"/>
                                     </figure>
                                     <h3 className="font-size-20 text-black">Elda Oktaviani</h3>
@@ -347,7 +338,7 @@ class LandingPage extends React.Component {
 
                                 <div className="block-team-member-1 text-center rounded h-100">
                                     <figure>
-                                        <img src="images/person_3.jpg" alt="Image"
+                                        <img src="images/zebua.jpeg" alt="Image"
                                              className="img-fluid rounded-circle"/>
                                     </figure>
                                     <h3 className="font-size-20 text-black">Putri Zebua</h3>
@@ -371,7 +362,7 @@ class LandingPage extends React.Component {
 
                                 <div className="block-team-member-1 text-center rounded h-100">
                                     <figure>
-                                        <img src="images/person_2.jpg" alt="Image"
+                                        <img src="images/fira.jpeg" alt="Image"
                                              className="img-fluid rounded-circle"/>
                                     </figure>
                                     <h3 className="font-size-20 text-black">Safira Andjani</h3>
@@ -395,7 +386,7 @@ class LandingPage extends React.Component {
 
                                 <div className="block-team-member-1 text-center rounded h-100">
                                     <figure>
-                                        <img src="images/person_1.jpg" alt="Image"
+                                        <img src="images/fiqpar.jpeg" alt="Image"
                                              className="img-fluid rounded-circle"/>
                                     </figure>
                                     <h3 className="font-size-20 text-black">Fiqri Pratama</h3>
