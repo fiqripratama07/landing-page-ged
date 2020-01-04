@@ -229,7 +229,7 @@ class LandingPage extends React.Component {
                             <div className="row justify-content-center mb-4 block-img-video-1-wrap">
                                 <div className="col-md-12 mb-5">
                                     <figure className="block-img-video-1" data-aos="fade">
-                                        <a href="https://vimeo.com/45830194" data-fancybox data-ratio="2">
+                                        <a href="https://www.youtube.com/watch?v=MXc7Qwpdzis" data-fancybox data-ratio="2">
                                             <span className="icon"><span className="icon-play"></span></span>
                                             <img src="images/cargo_delivery_big.jpg" alt="Image"
                                                  className="img-fluid"/>
@@ -458,7 +458,7 @@ class LandingPage extends React.Component {
                                         <h3 className="text-black h4 mb-4"><span
                                             className="icon-question_answer text-primary mr-2"></span>What available
                                             is
-                                            refund period?</h3>
+                                         delivery package   refund period?</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia
                                             and
                                             Consonantia, there live the blind texts. </p>
