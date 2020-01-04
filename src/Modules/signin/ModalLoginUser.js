@@ -30,7 +30,7 @@ class ModalLoginUser extends React.Component {
         Api.post('authenticate', {
             userName: this.props.login.userName,
             password: this.props.login.password
-        }).then(res => {
+        }).then((res, req)=> {
             console.log('res', res);
             if (res.status === 200) {
                 sessionStorage.setItem('userInfo', res.data.jwt);
