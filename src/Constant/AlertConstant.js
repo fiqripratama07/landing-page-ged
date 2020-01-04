@@ -5,7 +5,7 @@ export function status_success_200(message) {
         icon: 'success',
         title: message,
         showConfirmButton: false,
-        timer: 1500
+        timer: 3000
     })
 }
 
