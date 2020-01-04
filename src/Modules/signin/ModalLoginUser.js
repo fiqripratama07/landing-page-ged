@@ -37,12 +37,15 @@ class ModalLoginUser extends React.Component {
                 sessionStorage.setItem('role', res.data.role.pop().roleName);
                 sessionStorage.setItem('userId', res.data.idUser);
                 this.setState({redirect: true});
-                AlertConstant.status_success_200("Login Success");
+                AlertConstant.status_success_200("Login Sccess");
                 window.location.reload(false);
-            }else if (res.status === 500) {
-                AlertConstant.status_internal_server_error_500("Login Failed!");
-            }else if (req.status === 403){
-                AlertConstant.status_bad_request_400("Login Failed!");
+            }
+            if (res.status === 400) {
+                AlertConstant.status_bad_request_400("Bad Request");
+            } else if (res.status === 500) {
+                AlertConstant.status_internal_server_error_500("Internal Server Error");
+            } else if (res.status === 404) {
+                AlertConstant.status_not_found_404("Server Not Found");
             }
         })
             .catch(function (error) {

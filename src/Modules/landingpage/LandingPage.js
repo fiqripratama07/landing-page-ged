@@ -421,7 +421,7 @@ class LandingPage extends React.Component {
                                         <h3 className="text-black h4 mb-4"><span
                                             className="icon-question_answer text-primary mr-2"></span>What available
                                             is
-                                            refund period?</h3>
+                                         delivery package   refund period?</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia
                                             and
                                             Consonantia, there live the blind texts. </p>
