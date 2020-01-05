@@ -4,6 +4,12 @@ const initialState = {
         password: "",
         email: "",
         roles: [{id: '5'}]
+    },
+
+    errors: {
+        userName: "",
+        password: "",
+        email: ""
     }
 };
 

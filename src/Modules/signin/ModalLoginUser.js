@@ -30,26 +30,19 @@ class ModalLoginUser extends React.Component {
         Api.post('authenticate', {
             userName: this.props.login.userName,
             password: this.props.login.password
-        }).then((res, req)=> {
+        }).then((res, req) => {
             console.log('res', res);
             if (res.status === 200) {
                 sessionStorage.setItem('userInfo', res.data.jwt);
                 sessionStorage.setItem('role', res.data.role.pop().roleName);
                 sessionStorage.setItem('userId', res.data.idUser);
                 this.setState({redirect: true});
-                AlertConstant.status_success_200("Login Sccess");
+                AlertConstant.status_success_200("Login Success");
                 window.location.reload(false);
-            }
-            if (res.status === 400) {
-                AlertConstant.status_bad_request_400("Bad Request");
-            } else if (res.status === 500) {
-                AlertConstant.status_internal_server_error_500("Internal Server Error");
-            } else if (res.status === 404) {
-                AlertConstant.status_not_found_404("Server Not Found");
             }
         })
             .catch(function (error) {
-                console.log(error);
+                AlertConstant.loginError("Login Failed!");
             });
     };
 
@@ -73,7 +66,7 @@ class ModalLoginUser extends React.Component {
                                 <form>
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Username</label>
-                                        <input type="email" className="form-control" id="exampleInputEmail1"
+                                        <input type="text" className="form-control" id="exampleInputEmail1"
                                                aria-describedby="emailHelp" placeholder="Enter username"
                                                onChange={this.handleChangeUsername}/>
 

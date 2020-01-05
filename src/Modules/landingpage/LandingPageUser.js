@@ -12,12 +12,22 @@ import {connect} from "react-redux";
 
 class LandingPageUser extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirect: false
+        }
+    }
+
     handleTracking = (event) => {
         event.preventDefault();
-        LandingPageService.findTrackById(this.props.trackNumber).then(r =>
-            this.props.dispatch({type: 'TRACK_SUCCESS', transactions: r}));
-        console.log("NUMBER", this.props);
-        window.location.href = '#tracking';
+        LandingPageService.findTrackById(this.props.trackNumber).then(res => {
+                this.props.dispatch({type: 'TRACK_SUCCESS', transactions: res});
+                this.setState({redirect: true});
+                window.location.href = '#tracking';
+            }
+        ).catch(err => window.location.reload());
+        console.log("NUMBER", this.state);
     };
 
     handleChangeTrackNumber = (event) => {
@@ -92,7 +102,8 @@ class LandingPageUser extends React.Component {
 
                                 </div>
 
-                                <div className="toggle-button d-inline-block d-lg-none"><a href="#" className="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                                <div className="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                                           className="site-menu-toggle py-5 js-menu-toggle text-black"><span
                                     className="icon-menu h3"></span></a></div>
 
                             </div>
@@ -774,12 +785,12 @@ class LandingPageUser extends React.Component {
                 <ModalLoginUser/>
             </div>
 
-        )
+    )
     }
-}
+    }
 
-function mapStateToProps(state) {
-    return {...state.landingPage}
-}
+    function mapStateToProps(state) {
+        return {...state.landingPage}
+    }
 
-export default connect(mapStateToProps)(LandingPageUser);
+    export default connect(mapStateToProps)(LandingPageUser);

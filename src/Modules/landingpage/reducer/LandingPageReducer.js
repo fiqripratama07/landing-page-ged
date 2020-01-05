@@ -1,7 +1,7 @@
 const initialState = {
     transactions: {
         destinationAddresses: {
-            addressLocations:""
+            addressLocations:{}
         }
     },
     trackNumber: ""
